@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="th" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JewelryShop - หน้าหลัก</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full bg-gray-200 flex flex-col">
+    <!-- Navbar with gradient background -->
+    <nav class="bg-gradient-to-r from-purple-400 to-pink-500 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href class="text-2xl font-bold text-white">JewelryShop</a>
+                </div>
+                <div class="ml-6 flex items-center">
+                    <a href="{% url 'profileedit' %}" class="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <img class="h-8 w-8 rounded-full object-cover" src="{{ user.image.url }}" alt="Profile Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">
+            งานที่ลูกค้าสั่งทำก่อนหน้า
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'jewelry2.png' %}" alt="Sapphire" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <button class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">สั่งทำ</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'jewelry3.png' %}" alt="Citrine" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <button class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">สั่งทำ</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'jewelry4.png' %}" alt="Ruby" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <button class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">สั่งทำ</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'jewelry5.png' %}" alt="Garnet" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <button class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">สั่งทำ</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'jewelry6.png' %}" alt="Spinel" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <button class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">สั่งทำ</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="{% static 'jewelry1.png' %}" alt="Aquamarine" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <button class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">สั่งทำ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

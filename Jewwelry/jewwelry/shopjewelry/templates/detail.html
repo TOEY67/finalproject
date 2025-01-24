@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Jewelry Shop</title>
+</head>
+<body class="bg-gradient-to-r from-purple-400 to-pink-500 min-h-screen flex items-center justify-center">
+    <!-- Container -->
+    <div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl w-full">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-700">JewelryShop</h1>
+            <!-- ปุ่มย้อนกลับ -->
+            <button onclick="history.back()" class="px-4 py-2 bg-gray-300 hover:bg-gray-400 text-gray-700 rounded-lg shadow-md">
+                ย้อนกลับ
+            </button>
+        </header>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Upload Section -->
+            <div class="flex flex-col items-center">
+                <div class="flex items-center justify-center w-64 h-64 bg-gray-100 rounded-lg border border-gray-200 shadow-inner">
+                    <svg class="w-16 h-16 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5V19a2.5 2.5 0 002.5 2.5h13A2.5 2.5 0 0021 19v-2.5M16.5 10.5L12 6m0 0L7.5 10.5m4.5-4.5v13" />
+                    </svg>
+                </div>
+                <button class="mt-4 px-6 py-2 bg-yellow-400 hover:bg-yellow-500 text-white font-medium rounded-lg shadow-md">
+                    อัปโหลด
+                </button>
+            </div>
+
+            <!-- Order Section -->
+            <div>
+                <h2 class="text-lg font-semibold text-gray-700 mb-4">สั่งทำสินค้า</h2>
+
+                <!-- Description -->
+                <label for="description" class="block text-sm text-gray-600 mb-2">รายละเอียดลักษณะ:</label>
+                <textarea id="description" rows="4" class="w-full p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-purple-500 focus:outline-none" placeholder="ใส่ข้อมูลในการทำสินค้า"></textarea>
+
+                <!-- Quantity -->
+                <div class="mt-4">
+                    <label for="quantity" class="block text-sm text-gray-600 mb-2">จำนวน (เม็ด):</label>
+                    <input id="quantity" type="number" value="15" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                </div>
+
+                <!-- Order Button -->
+                <button class="mt-6 w-full px-6 py-2 bg-yellow-400 hover:bg-yellow-500 text-white font-medium rounded-lg shadow-md">
+                    สั่งทำสินค้า
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript ฟังก์ชันย้อนกลับ -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
